@@ -3,13 +3,13 @@ from enum import Enum
 
 class Pet:
 
-    def __init__(self, name, breed, age, greeting, mass, kind):
+    def __init__(self, name, breed, age, *args):
         self.name = name
         self.breed = breed
         self.age = age
-        self.greeting = greeting
-        self.mass = mass
-        self.kind = kind
+        self.greeting = args[0]
+        self.mass = args[1]
+        self.kind = args[2]
 
     def politeness_test(self):
         """визначає вічлива тварина, чи ні"""
